@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Platform, StyleSheet, Text, View } from 'react-native'
+import Input from "./Input"
 
 const instructions = Platform.select({
     ios: 'Press Cmd + R to reload, \n' +
@@ -28,6 +29,23 @@ const styles = StyleSheet.create({
 })
 
 export default class App extends Component {
+    constructor() {
+        super()
+        
+        this.state = {
+          year: 2016
+        }
+      }
+    
+      updateYear() {
+        this.state.year = 2017
+      }
+
+      update() {
+          this.forceUpdate()
+      }
+  
+      
     render() {
 
         return (<>
@@ -43,9 +61,14 @@ export default class App extends Component {
                 <Text style={styles.instructions}>
                     {instructions}
                 </Text>
+
+                <Text onPress={() => this.updateYear()}>The year is: {this.state.year}</Text>
+
+                <Text onPress={() => this.update()}>forceUpdate</Text>
+                <Input />
             </View>
+
+            
         </>)
     }
 }
-
-// export default App
