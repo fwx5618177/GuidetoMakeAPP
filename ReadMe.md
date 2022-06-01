@@ -23,7 +23,7 @@
 - [x] 创建项目
 - [x] 创建TS
 - [x] 创建首个View
-- [ ] 搭建RN IOS、安卓开发环境
+- [x] 搭建RN IOS、安卓开发环境
 - [ ] 整理书的内容
     - [ ] 基础React和特殊API
     - [ ] 样式、动画、Redux数据架构
@@ -42,6 +42,7 @@ npm i -g react-native-cli
 react-native init [fileName]
 
 npx react-native init projectName --template react-native-template-typescript
+npx react-native init TodoApp --template react-native-template-typescript
 
 npm install -g expo-cli
 expo init MyTSProject
